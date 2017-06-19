@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/roboEMF/src" modelPluginID="roboEMF" modelName="RoboEMF"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" rootImplementsInterface=""
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>roboEMF.ecore</foreignModel>
+  <genPackages prefix="RoboEMF" disposableProviderFactory="true" ecorePackage="roboEMF.ecore#/">
+    <genDataTypes ecoreDataType="roboEMF.ecore#//EString"/>
+    <genDataTypes ecoreDataType="roboEMF.ecore#//EInteger"/>
+    <genClasses ecoreClass="roboEMF.ecore#//EScript">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute roboEMF.ecore#//EScript/Name"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference roboEMF.ecore#//EScript/mainbody"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//SubBody">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference roboEMF.ecore#//SubBody/command"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//MainBody">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference roboEMF.ecore#//MainBody/commandmain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference roboEMF.ecore#//MainBody/command"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//EComment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute roboEMF.ecore#//EComment/comment"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//Command"/>
+    <genClasses ecoreClass="roboEMF.ecore#//IfStatement">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference roboEMF.ecore#//IfStatement/subbody"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference roboEMF.ecore#//IfStatement/conditionmodel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference roboEMF.ecore#//IfStatement/elsebody"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//WhileStatement">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference roboEMF.ecore#//WhileStatement/subbody"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference roboEMF.ecore#//WhileStatement/conditionmodel"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//RepeateStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute roboEMF.ecore#//RepeateStatement/count"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference roboEMF.ecore#//RepeateStatement/subbody"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute roboEMF.ecore#//Condition/value"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//RoutineDecl">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference roboEMF.ecore#//RoutineDecl/subbody"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute roboEMF.ecore#//RoutineDecl/name"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//RoutineCall">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference roboEMF.ecore#//RoutineCall/decl"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//TurnLeftCmd"/>
+    <genClasses ecoreClass="roboEMF.ecore#//TraceCmd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute roboEMF.ecore#//TraceCmd/trace"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//DropCmd"/>
+    <genClasses ecoreClass="roboEMF.ecore#//StepCmd"/>
+    <genClasses ecoreClass="roboEMF.ecore#//PickCmd"/>
+    <genClasses ecoreClass="roboEMF.ecore#//DropMarkCmd">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference roboEMF.ecore#//DropMarkCmd/location"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//PickMarkCmd">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference roboEMF.ecore#//PickMarkCmd/location"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//DestroyWallCmd">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference roboEMF.ecore#//DestroyWallCmd/location"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//BuildWallCmd">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference roboEMF.ecore#//BuildWallCmd/location"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//Full"/>
+    <genClasses ecoreClass="roboEMF.ecore#//Mark"/>
+    <genClasses ecoreClass="roboEMF.ecore#//WallAhead"/>
+    <genClasses ecoreClass="roboEMF.ecore#//Location">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute roboEMF.ecore#//Location/row"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute roboEMF.ecore#//Location/col"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//BracketsCond">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference roboEMF.ecore#//BracketsCond/orcond"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference roboEMF.ecore#//BracketsCond/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//NotCond">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference roboEMF.ecore#//NotCond/brackets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute roboEMF.ecore#//NotCond/not"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//AndCond">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference roboEMF.ecore#//AndCond/lhs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference roboEMF.ecore#//AndCond/rhs"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//OrCond">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference roboEMF.ecore#//OrCond/rhs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference roboEMF.ecore#//OrCond/lhs"/>
+    </genClasses>
+    <genClasses ecoreClass="roboEMF.ecore#//CommandMain"/>
+    <genClasses ecoreClass="roboEMF.ecore#//Heading"/>
+    <genClasses ecoreClass="roboEMF.ecore#//ConditionModel"/>
+  </genPackages>
+</genmodel:GenModel>
